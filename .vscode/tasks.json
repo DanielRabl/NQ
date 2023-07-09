@@ -6,17 +6,72 @@
             "command": "cl.exe",
             "args": [
                 "/Zi",
-                "/MD",
+                "/MT",
                 "/O2",
                 "/EHsc",
+                "-DSFML_STATIC",
                 "/nologo",
                 "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "${file}",
-                "/I C:/Programs/VisualStudio2022/VC/Tools/MSVC/14.36.32532/include/",
+                "/D \"SFML_STATIC\"",
+                //latest c++
+                "/std:c++latest",
+                "/I \"C:/Programs/VisualStudio2022/VC/Tools/MSVC/14.36.32532/include/\"",
                 "/I \"C:/Program Files (x86)/Windows Kits/10/Include/10.0.22000.0/ucrt\"",
+                "/I \"C:/dev/packages/vcpkg/installed/x64-windows-static/include/\"",
+                "/I \"C:/dev/libraries/qpl/include/\"",
+                "/I \"C:/dev/libraries/qpl/src/\"",
                 "/link /LIBPATH:\"C:/Programs/VisualStudio2022/VC/Tools/MSVC/14.36.32532/lib/x64/\"",
                 "/LIBPATH:\"C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22000.0/um/x64\"",
                 "/LIBPATH:\"C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22000.0/ucrt/x64\"",
+                "/LIBPATH:\"C:/dev/packages/vcpkg/installed/x64-windows-static/lib/\"",
+
+                /*
+                brotlicommon-static.lib
+                brotlidec-static.lib
+                brotlienc-static.lib
+                bz2.lib
+                FLAC++.lib
+                FLAC.lib
+                freetype.lib
+                GlU32.Lib
+                libpng16.lib
+                ogg.lib
+                OpenAL32.lib
+                OpenGL32.Lib
+                sfml-audio-s.lib
+                sfml-graphics-s.lib
+                sfml-network-s.lib
+                sfml-system-s.lib
+                sfml-window-s.lib
+                vorbis.lib
+                vorbisenc.lib
+                vorbisfile.lib
+                zlib.lib
+                */
+                "brotlicommon-static.lib",
+                "brotlidec-static.lib",
+                "bz2.lib",
+                "FLAC++.lib",
+                "FLAC.lib",
+                "freetype.lib",
+                "libpng16.lib",
+                "ogg.lib",
+                "OpenAL32.lib",
+                "OpenGL32.Lib",
+                "sfml-system-s.lib",
+                "sfml-graphics-s.lib",
+                "sfml-audio-s.lib",
+                "sfml-network-s.lib",
+                "sfml-window-s.lib",
+                "vorbis.lib",
+                "vorbisenc.lib",
+                "vorbisfile.lib",
+                "zlib.lib",
+                "user32.lib",
+                "advapi32.lib",
+
+                //"/I C:\dev\packages\vcpkg\installed\x64-windows-static\include",
             ],
             "options": {
                 "cwd": "${fileDirname}"

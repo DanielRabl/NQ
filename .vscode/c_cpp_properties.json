@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/dev/packages/vcpkg/installed/x64-windows-static/include/",
+                "C:/dev/libraries/qpl/include/",
+                "C:/dev/libraries/qpl/src/",
+            ],
+            "defines": [
+                "UNICODE",
+                "_UNICODE",
+                "SFML_STATIC",
+            ],
+            "windowsSdkVersion": "10.0.22000.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
